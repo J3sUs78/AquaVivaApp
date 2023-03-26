@@ -15,7 +15,7 @@ public class Main {
             V_init.frmInit  = new V_init();
             ControllerForms controller = new ControllerForms(V_init.frmInit);
             V_init.frmInit .setLocationRelativeTo(null);
-            V_init.frmInit .setSize(364, 442);
+            V_init.frmInit .setSize(712, 528);
             V_init.frmInit .setVisible(true);
 
         }
