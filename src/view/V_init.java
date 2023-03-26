@@ -34,6 +34,11 @@ public class V_init extends javax.swing.JFrame {
         btnMakeNewSale.setText("REALIZAR VENTA");
 
         btnRegisterSeller.setText("REGISTRAR VENDEDOR");
+        btnRegisterSeller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterSellerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,10 +82,14 @@ public class V_init extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRegisterSellerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterSellerActionPerformed
+        
+    }//GEN-LAST:event_btnRegisterSellerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMakeNewSale;
-    private javax.swing.JButton btnRegisterSeller;
+    public javax.swing.JButton btnMakeNewSale;
+    public javax.swing.JButton btnRegisterSeller;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
