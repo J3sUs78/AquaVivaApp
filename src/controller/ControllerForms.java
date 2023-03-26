@@ -11,24 +11,24 @@ import model.*;
  */
 public class ControllerForms implements ActionListener {
 
-    V_init viewInit = new V_init();
+    V_init viewInit = new V_init();//Initialization of a Frame to manipulate it in the controller
+    
     V_CreateSeller viewAddSeller = new V_CreateSeller();
 
-    public ControllerForms(V_init vInit) {
+    public ControllerForms(V_init vInit) { //First Controller
         this.viewInit = vInit;
-        //agregando el evento a los botones
+        //adding the event to the buttons
         this.viewInit.btnRegisterSeller.addActionListener(this);
         this.viewInit.btnMakeNewSale.addActionListener(this);
-        //dandoles un nombre en comando para que se identifique en String
+        //giving them a name in command so that it is identified in String
         this.viewInit.btnRegisterSeller.setActionCommand("registerSeller");
         this.viewInit.btnMakeNewSale.setActionCommand("makeNewSell");
     }
 
     public ControllerForms(V_CreateSeller vAddSeller) {
         this.viewAddSeller = vAddSeller;
-
         this.viewAddSeller.btnConfirm.addActionListener(this);
-        //dandoles un nombre en comando para que se identifique en String
+        //giving them a name in command so that it is identified in String
         this.viewAddSeller.btnConfirm.setActionCommand("confirmSeller");
     }
 
@@ -45,6 +45,7 @@ public class ControllerForms implements ActionListener {
                 V_init.frmAddSeller.setVisible(true);
             }
         }
+        
         if (e.getSource() == viewAddSeller.btnConfirm) {
             SellerDAO dao = new SellerDAO();
             dao.createSeller(confirmDates());
