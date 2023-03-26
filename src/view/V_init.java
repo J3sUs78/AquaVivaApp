@@ -7,6 +7,7 @@ package view;
 public class V_init extends javax.swing.JFrame {
 
     public static V_init frmInit;
+    public static V_CreateSeller frmAddSeller;
     
     public V_init() {
         initComponents();
